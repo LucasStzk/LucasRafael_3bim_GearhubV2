@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Gearhub V2</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body onload="iniciarCatalogo()">
+    <header>
+        <h1>Gear<span>hub</span> V2</h1>
+        <p>Confira os periféricos disponíveis na loja</p>
+    </header>
+
+    <nav>
+        <a href="../menu/menu.html">🏠 Início</a>
+        <a href="../catalogo/catalogo.html" class="ativo">🛒 Catálogo</a>
+        <a href="../periferico/periferico.html">🖱️ Periféricos</a>
+        <a href="../categoria/categoria.html">🗂️ Categorias</a>
+        <a href="../fabricante/fabricante.html">🏭 Fabricantes</a>
+        <a href="../especificacao/especificacao.html">📋 Especificações</a>
+    </nav>
+
+    <main class="container-master">
+        <section class="filtros">
+            <input type="text" id="inputBusca" placeholder="Buscar periférico ou fabricante..." oninput="filtrar()">
+            <select id="selectCategoria" onchange="filtrar()">
+                <option value="">Todas as categorias</option>
+            </select>
+        </section>
+
+        <section class="vitrine" id="vitrine">
+            <p class="vazio">Carregando...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gearhub V2 - Loja de Periféricos</p>
+        <p>Lucas Rafael (Bigas) - Turma M32 - 2026</p>
+    </footer>
+
+    <script src="./catalogo.js"></script>
+</body>
+
+</html>

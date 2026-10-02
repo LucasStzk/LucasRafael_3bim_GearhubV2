@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal - Gearhub V2</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body onload="carregarResumo()">
+    <header>
+        <h1>Gear<span>hub</span> V2</h1>
+        <p>Loja de periféricos - selecione o módulo que deseja gerenciar</p>
+    </header>
+
+    <nav>
+        <a href="../menu/menu.html" class="ativo">🏠 Início</a>
+        <a href="../catalogo/catalogo.html">🛒 Catálogo</a>
+        <a href="../periferico/periferico.html">🖱️ Periféricos</a>
+        <a href="../categoria/categoria.html">🗂️ Categorias</a>
+        <a href="../fabricante/fabricante.html">🏭 Fabricantes</a>
+        <a href="../especificacao/especificacao.html">📋 Especificações</a>
+    </nav>
+
+    <main class="container-master">
+        <div class="menu-grid">
+            <a href="../catalogo/catalogo.html" class="card-menu">
+                <div class="card-icon">🛒</div>
+                <h2>Catálogo</h2>
+                <p>Vitrine com fotos, preços e ficha técnica dos periféricos.</p>
+            </a>
+            <a href="../periferico/periferico.html" class="card-menu">
+                <div class="card-icon">🖱️</div>
+                <h2>Periféricos</h2>
+                <p>Cadastrar, alterar, consultar e excluir periféricos, com imagem.</p>
+            </a>
+            <a href="../categoria/categoria.html" class="card-menu">
+                <div class="card-icon">🗂️</div>
+                <h2>Categorias</h2>
+                <p>Teclados, mouses, headsets, monitores e mais.</p>
+            </a>
+            <a href="../fabricante/fabricante.html" class="card-menu">
+                <div class="card-icon">🏭</div>
+                <h2>Fabricantes</h2>
+                <p>Marcas e países de origem dos produtos.</p>
+            </a>
+            <a href="../especificacao/especificacao.html" class="card-menu">
+                <div class="card-icon">📋</div>
+                <h2>Especificações</h2>
+                <p>Ficha técnica de cada periférico (relação 1:1).</p>
+            </a>
+        </div>
+
+        <aside class="resumo">
+            <h2>Resumo da loja</h2>
+            <div class="resumo-numeros">
+                <div><strong id="totPerifericos">-</strong>periféricos</div>
+                <div><strong id="totCategorias">-</strong>categorias</div>
+                <div><strong id="totFabricantes">-</strong>fabricantes</div>
+                <div><strong id="totEstoque">-</strong>itens em estoque</div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gearhub V2 - Loja de Periféricos</p>
+        <p>Lucas Rafael (Bigas) - Turma M32 - 2026</p>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+
+</html>

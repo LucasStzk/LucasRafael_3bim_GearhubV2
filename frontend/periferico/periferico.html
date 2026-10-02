@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Periféricos - Gearhub V2</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body onload="inicializar()">
+    <header>
+        <h1>Gear<span>hub</span> V2</h1>
+        <p>Gerencie o estoque de periféricos da loja.</p>
+    </header>
+
+    <nav>
+        <a href="../menu/menu.html">🏠 Início</a>
+        <a href="../catalogo/catalogo.html">🛒 Catálogo</a>
+        <a href="../periferico/periferico.html" class="ativo">🖱️ Periféricos</a>
+        <a href="../categoria/categoria.html">🗂️ Categorias</a>
+        <a href="../fabricante/fabricante.html">🏭 Fabricantes</a>
+        <a href="../especificacao/especificacao.html">📋 Especificações</a>
+    </nav>
+
+    <main class="container-master">
+        <div class="conteudo-principal">
+            <section class="form-esquerda">
+                <h2>Dados - Periféricos</h2>
+
+                <label for="input_id_periferico">ID do Periférico</label>
+                <div class="linha-id">
+                    <input type="text" id="input_id_periferico" placeholder="Ex: 1">
+                    <input type="button" value="Procure" id="btProcure" onclick="procure()">
+                    <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+                    <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+                    <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+                </div>
+
+                <label for="input_nome_periferico">Nome do Periférico</label>
+                <input type="text" id="input_nome_periferico" placeholder="Ex: Mouse G203 Lightsync">
+                <label for="input_id_categoria">Categoria</label>
+                <select id="input_id_categoria" disabled>
+                    <option value="">Carregando...</option>
+                </select>
+                <label for="input_id_fabricante">Fabricante</label>
+                <select id="input_id_fabricante" disabled>
+                    <option value="">Carregando...</option>
+                </select>
+                <label for="input_preco_periferico">Preço (R$)</label>
+                <input type="number" step="0.01" min="0" id="input_preco_periferico">
+                <label for="input_quantidade_estoque_periferico">Quantidade em Estoque</label>
+                <input type="number" step="1" min="0" id="input_quantidade_estoque_periferico">
+
+                <div id="divAviso">Informe o ID e clique em Procure</div>
+
+                <div class="botoes-acao">
+                    <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+                    <input type="button" value="Cancelar" id="btCancelar" onclick="cancelarOperacao()" style="display:none;">
+                </div>
+            </section>
+
+            <aside class="form-direita">
+                <h2>Imagem do Periférico</h2>
+                <p class="instrucao">(Clique na imagem para alterar)</p>
+                <div class="img-container">
+                    <img id="imgPeriferico" src="http://localhost:3001/imagens/silhueta.png" alt="Imagem do periférico" onclick="acionarUpload()">
+                    <input type="file" id="inputImagem" accept="image/*" style="display: none;" onchange="previewImagem()">
+                </div>
+            </aside>
+        </div>
+
+        <section class="lista-registros">
+            <h3>Periféricos Cadastrados (clique em uma linha para selecionar)</h3>
+            <div id="outputSaida">Carregando...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gearhub V2 - Loja de Periféricos</p>
+        <p>Lucas Rafael (Bigas) - Turma M32 - 2026</p>
+    </footer>
+
+    <script src="./periferico.js"></script>
+</body>
+
+</html>
